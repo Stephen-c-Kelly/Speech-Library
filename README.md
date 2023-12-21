@@ -1,2 +1,2 @@
-# Speech-Library
-Blog site providing speech text and recording uploads build for educators and students
+# Text and Speech Analysis Application
+Full Stack application providing text and speech analysis tools built for educators and students.
