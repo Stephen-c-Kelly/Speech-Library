@@ -2,7 +2,7 @@ import mongoose from 'mongoose'
 
 const Schema = mongoose.Schema
 
-const speechesSchema = new Schema({
+const speechSchema = new Schema({
   title: { type: String },
   date: { type: Date, default: Date.now },
   image: { type: String },
@@ -14,8 +14,18 @@ const speechesSchema = new Schema({
   
 });
 
-const Checklist = mongoose.model('Checklist', checklistSchema, 'college-checklist')
+const userSchema = new Users ({
+
+})
+
+const commentSchema = new Comment ({
+
+})
+
+// need to add schema for users and comments
+
+const Speech = mongoose.model('Speech', speechSchema,)
 
 export {
-  Checklist
+  Speech
 }

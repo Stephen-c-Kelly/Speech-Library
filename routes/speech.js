@@ -1,0 +1,20 @@
+import express from 'express' 
+const router = express.Router() 
+
+// Import controller functions that can be passed as an argument into the router
+// 
+import {   } from '../controllers/ file name ' 
+
+//no payload. Read links to all Speeches
+router.get('/', getSpeech)
+
+//no payload, but takes ID. Read one speech
+router.get ('/:speechId', getSpeechById)
+
+router.post ('/', createSpeech)
+
+router.put('/;speechId', updateSpeech)
+
+router.delete('/;speechId', deleteSpeech)
+
+export default router
