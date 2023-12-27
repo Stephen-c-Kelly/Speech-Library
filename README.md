@@ -1,5 +1,5 @@
-# Text and Speech Analysis Application
-Full Stack application providing text and speech analysis tools built for educators and students.
+# Back End - Text and Speech Analysis Application
+Ppplication providing text and speech analysis tools built for educators and students.
 
 
 ## Project Description 
@@ -21,11 +21,10 @@ Deployed Website: [ TBD ]
 GitHub Repo: https://github.com/Stephen-c-Kelly/text-and-speech-analysis
 
 
-#### MVP & Stretch Goals
+#### User Stories (MVP & Stretch Goals)
 
-View MVP Goals on Trello: 
+Trello: 
 https://trello.com/invite/b/32CEr7dF/ATTI87bd2352d5d3408544cef8dbe076c2fcF03D9B89/text-and-speech-analysis-application
-
 
 #### Timeline - Daily Accountability
 
@@ -35,3 +34,4 @@ https://docs.google.com/spreadsheets/d/14RbvwulV9nBnh4dIqPwIFUmxUg1L58HXQjIg-X__
 #### Resources
 
 - https://www.americanrhetoric.com/rhetoricaldevicesinsound.htm
+- Miro Wireframes - https://miro.com/app/board/uXjVN_uy3yY=/?share_link_id=582323872948
