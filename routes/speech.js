@@ -3,7 +3,7 @@ const router = express.Router()
 
 // Import controller functions that can be passed as an argument into the router
 // 
-import {   } from '../controllers/ file name ' 
+import {  getSpeech, getSpeechById, createSpeech, updateSpeech, deleteSpeech } from '../controllers/ file name ' 
 
 //no payload. Read links to all Speeches
 router.get('/', getSpeech)

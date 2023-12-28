@@ -14,6 +14,7 @@ const speechSchema = new Schema({
   
 });
 
+// need to add schema for users and comments
 const userSchema = new Users ({
 
 })
@@ -22,7 +23,7 @@ const commentSchema = new Comment ({
 
 })
 
-// need to add schema for users and comments
+
 
 const Speech = mongoose.model('Speech', speechSchema,)
 
