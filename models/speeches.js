@@ -12,18 +12,7 @@ const speechSchema = new Schema({
   speakerLastName: { type: String, required: true},
   comments: [{ type: Object }],
   
-});
-
-// need to add schema for users and comments
-const userSchema = new Users ({
-
 })
-
-const commentSchema = new Comment ({
-
-})
-
-
 
 const Speech = mongoose.model('Speech', speechSchema,)
 
