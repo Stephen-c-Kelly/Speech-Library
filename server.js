@@ -25,23 +25,23 @@ app.use('/api/speech', speechRouter)
 // app.use('/api/user', userRouter)
 // app.use('/api/comment', commentRouter)
 
-// Catch 404 and forward to error handler (gpt)
-app.use((req, res, next) => {
-  const err = new Error('Not Found');
-  err.status = 404;
-  next(err);
-});
+// // Catch 404 and forward to error handler (gpt)
+// app.use((req, res, next) => {
+//   const err = new Error('Not Found');
+//   err.status = 404;
+//   next(err);
+// });
 
-// Error handler (gpt)
-app.use((err, req, res, next) => {
-  // Set locals, only providing error in development
-  res.locals.message = err.message;
-  res.locals.error = req.app.get('env') === 'development' ? err : {};
+// // Error handler (gpt)
+// app.use((err, req, res, next) => {
+//   // Set locals, only providing error in development
+//   res.locals.message = err.message;
+//   res.locals.error = req.app.get('env') === 'development' ? err : {};
 
-  // Render the error page
-  res.status(err.status || 500);
-  res.send('error');
-});
+//   // Render the error page
+//   res.status(err.status || 500);
+//   res.send('error');
+// });
 
 app.listen(PORT, () => {
   console.log(`App running on ${PORT}`)

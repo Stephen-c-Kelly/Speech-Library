@@ -10,8 +10,7 @@ const speechSchema = new Schema({
   text: { type: String, required: true},
   speakerFirstName: { type: String, required: true},
   speakerLastName: { type: String, required: true},
-  comments: [{ type: Object }],
-  
+  comments: [{ type: Object }],  
 })
 
 const Speech = mongoose.model('Speech', speechSchema,)
