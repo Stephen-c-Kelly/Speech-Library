@@ -63,11 +63,13 @@ const updateSpeech = async (req, res) => {
 const deleteSpeech = async (req, res) => {
   try {
     const id = req.params.speechId
-    const deleteDoc = await Speech.deleteOne({id})
+    console.log(`start of delete speech backend, id:`, id)
+    const deleteDoc = await Speech.deleteOne({_id: id})
+    console.log(`end of delete doc function ${id} should be gone` )
     res.status(201).json(`document deleted`);
   } catch (error) {
     console.log('there was an error:', error)
-    res.status(500).send(`an error occured in the updating of this speech in the database.`)
+    res.status(500).send(`an error occured in the deleting of this speech in the database.`)
   }
 }
 
