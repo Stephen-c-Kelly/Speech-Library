@@ -69,7 +69,7 @@ const deleteSpeech = async (req, res) => {
     res.status(201).json(`document deleted. id:`, id);
   } catch (error) {
     console.log('there was an error:', error)
-    res.status(500).send(`an error occured in the deleting of this speech in the database.`)
+    res.status(500).send(`an error occured in the deleting of this speech in the database:`, error)
   }
 }
 
