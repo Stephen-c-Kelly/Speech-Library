@@ -1,7 +1,7 @@
 
-function packageTextForStorage(text) {
+function packageTextForStorage(payload) {
   // Escaping special characters like quotes, backslashes, etc.
-  let escapedText = text.replace(/\\/g, '\\\\') // Escape backslashes first
+  let escapedText = payload.data.text.replace(/\\/g, '\\\\') // Escape backslashes first
                          .replace(/"/g, '\\"')  // Escape double quotes
                          .replace(/'/g, "\\'")  // Escape single quotes
                          .replace(/\n/g, '\\n') // Replace newline characters
