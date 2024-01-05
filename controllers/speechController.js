@@ -62,6 +62,7 @@ const updateSpeech = async (req, res) => {
 
 const deleteSpeech = async (req, res) => {
   try {
+    
     const id = req.params.speechId
     
     const deleteDoc = await Speech.deleteOne({_id: id})
