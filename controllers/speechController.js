@@ -17,8 +17,8 @@ const getSpeech = async (req, res) => {
 const getSpeechById = async (req, res) => {
   try {
     const id = req.params.speechId
-    const rawSpeech = await Speech.findById(id)
-    const speech = unpackTextForDisplay(rawSpeech)
+    const speech = await Speech.findById(id)
+    // const speech = unpackTextForDisplay(rawSpeech)
     res.status(201).json(speech);
     if (!speech) {
       return res.status(404).send('Speech not found')
@@ -32,8 +32,8 @@ const getSpeechById = async (req, res) => {
 const createSpeech = async (req, res) => {
   // console.log(`received data;`, req.body)
   try {
-    const rawPayload = req.body
-    const payload = packageTextForStorage(rawPayload)
+    const payload = req.body
+    // const payload = packageTextForStorage(rawPayload)
     payload.id = await Speech.countDocuments({})+1
     const newSpeechItem = new Speech(payload)
     const savedSpeech = await newSpeechItem.save()
