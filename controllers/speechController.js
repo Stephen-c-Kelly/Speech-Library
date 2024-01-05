@@ -33,6 +33,7 @@ const createSpeech = async (req, res) => {
   // console.log(`received data;`, req.body)
   try {
     const payload = req.body
+    console.log(req.body)
     // const payload = packageTextForStorage(rawPayload)
     payload.id = await Speech.countDocuments({})+1
     const newSpeechItem = new Speech(payload)
