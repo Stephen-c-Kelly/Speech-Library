@@ -1,7 +1,10 @@
 import { Speech } from '../models/speeches.js'
 
+import {packageTextForStorage,
+  unpackTextForDisplay } from '../text/format.js'
+
 const getSpeech = async (req, res) => {
-  console.log(`start of get speech`)
+  
   try {
     const speeches = await Speech.find({}, 'title date speakerFirstName speakerLastName')
     res.json(speeches);
@@ -14,7 +17,8 @@ const getSpeech = async (req, res) => {
 const getSpeechById = async (req, res) => {
   try {
     const id = req.params.speechId
-    const speech = await Speech.findById(id)
+    const rawSpeech = await Speech.findById(id)
+    const speech = unpackTextForDisplay(rawSpeech)
     res.status(201).json(speech);
     if (!speech) {
       return res.status(404).send('Speech not found')
@@ -28,7 +32,8 @@ const getSpeechById = async (req, res) => {
 const createSpeech = async (req, res) => {
   // console.log(`received data;`, req.body)
   try {
-    const payload = req.body
+    const rawPayload = req.body
+    const payload = packageTextForStorage(rawPayload)
     payload.id = await Speech.countDocuments({})+1
     const newSpeechItem = new Speech(payload)
     const savedSpeech = await newSpeechItem.save()
