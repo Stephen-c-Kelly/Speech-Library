@@ -25,6 +25,7 @@ export {
   unpackTextForDisplay
 }
 
+//testing:
 
 let originalText = `Every tomorrow has two handles; we can take hold of the handle of anxiety, or the handle of faith. And the first battle is won, my brothers and sisters, when we fight for belief in ourselves, and find that it has come to us while we are still battling. We must not allow petty things to color our lives and stimulate them into vast proportions of evil. To dwell on every slight and clutch it close to our breast and nourish it will corrode our thinking. We're on the move now, and as Frederick Dougless said, "Power concedes nothing without a struggle." It never has, and it never will.
 

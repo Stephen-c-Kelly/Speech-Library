@@ -18,6 +18,7 @@ const getSpeechById = async (req, res) => {
   try {
     const id = req.params.speechId
     const speech = await Speech.findById(id)
+    console.log(speech)
     // const speech = unpackTextForDisplay(rawSpeech)
     res.status(201).json(speech);
     if (!speech) {
