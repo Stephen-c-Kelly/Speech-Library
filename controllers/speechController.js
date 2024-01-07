@@ -17,7 +17,6 @@ const getSpeech = async (req, res) => {
 const getSpeechById = async (req, res) => {
   try {
     const id = req.params.speechId
-    
     const rawSpeech = await Speech.findById(id)
     // console.log(`speech is`, speech)
     const speech = unpackTextForDisplay(rawSpeech)
