@@ -17,8 +17,9 @@ const getSpeech = async (req, res) => {
 const getSpeechById = async (req, res) => {
   try {
     const id = req.params.speechId
-    const speech = await Speech.findById(id)
-    // const speech = unpackTextForDisplay(rawSpeech)
+    const rawSpeech = await Speech.findById(id)
+    // console.log(`speech is`, speech)
+    const speech = unpackTextForDisplay(rawSpeech)
     res.status(201).json(speech);
     if (!speech) {
       return res.status(404).send('Speech not found')
@@ -32,9 +33,10 @@ const getSpeechById = async (req, res) => {
 const createSpeech = async (req, res) => {
   // console.log(`received data;`, req.body)
   try {
-    const payload = req.body
-    // const payload = packageTextForStorage(rawPayload)
-    payload.id = await Speech.countDocuments({})+1
+    const rawPayload = req.body
+    console.log(`req body from create is:`, req.body)
+    const payload = packageTextForStorage(rawPayload)
+    // payload.id = await Speech.countDocuments({})+1
     const newSpeechItem = new Speech(payload)
     const savedSpeech = await newSpeechItem.save()
     res.status(201).json(savedSpeech);
@@ -47,11 +49,11 @@ const createSpeech = async (req, res) => {
 
 const updateSpeech = async (req, res) => {
   try {
-    let payload = req.body
+    const rawPayload = req.body
+    const payload = packageTextForStorage(rawPayload)
     const id = req.params.speechId
-    console.log(payload)
     const result = await Speech.findById(id)
-
+    // logic to look through was was submitted in payload and update necessary bits.
     for (const key in payload) {
       if (payload.hasOwnProperty(key) && result[key] !== undefined) {
         result[key] = payload[key];
