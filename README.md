@@ -1,7 +1,6 @@
 # Back End - Text and Speech Analysis Application
 Application providing text and speech analysis discussion tools built for educators and students.
 
-
 ## Project Description 
 
 "Speech and Text Analysis Application" is an online blog site that helps educators and students review and discuss speeches.  After a landing page that lists all speeches uploaded to the database, users can review comments and annotations on each speech.  
