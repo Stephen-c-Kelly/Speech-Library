@@ -17,6 +17,10 @@ function unpackTextForDisplay(payload) {
     .replace(/\\"/g, '"')    // Unescape double quotes
     .replace(/\\'/g, "'")    // Unescape single quotes
     .replace(/\\\\/g, '\\'); // Unescape backslashes
+  if (payload.date) {
+    const originalDate = new Date(payload.date); 
+    payload.date = originalDate.toISOString().split('T')[0];
+    }  
    
   return payload
 }
