@@ -7,6 +7,13 @@ Application providing text and speech analysis discussion tools built for educat
 ## Technologies and Libraries Used
 This application is built using Node/Express/MongoDB using a RESTful API design, deployed via Heroku.
 
+Technologies used:
+-- Node.js
+-- Express
+-- MongoDB
+-- Mongoose
+-- Heroku
+
 ## Data Architecture
 See ERD Designs here: https://lucid.app/lucidchart/6bf8a084-4c1b-4731-b7bb-0f1c17cd5587/edit?invitationId=inv_cdd599c9-0cba-4dd7-a979-640225ff6b56 
 
