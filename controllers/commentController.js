@@ -17,7 +17,6 @@ const createComment = async (req, res) => {
 
 const getCommentBySpeechId = async (req, res) => {
   try {
-    console.log(`start of get comments from speech Id`)
     const id = req.params.speechId
     const comments = await Comment.find({speechId : id}, 'name date text')
     res.json(comments)
